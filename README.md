@@ -31,3 +31,5 @@ model.add(Dense(10,activation='relu'))
 model.add(Dense(8,activation='relu'))
 model.add(Dropout(0.25))
 model.add(Dense(1, act
+model.compile(loss="binary_crossentropy", optimizer="SGD", metrics=['accuracy'])
+model_history = model.fit(X_train, y_train, epochs=200, validation_data=(X_valid, y_valid))
